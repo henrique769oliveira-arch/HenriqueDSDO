@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Meu Primeiro Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+ <!-- Cabeçalho / Apresentação -->
+    <h1>Henrique dos Santos de Oliveira</h1>
+    <p>Estudante de Análise e Desenvolvimento de Sistemas | Desenvolvedor em formação</p>
+    
+    <!-- Imagem de perfil ou tecnologia (pode trocar depois) -->
+    <img src="https://picsum.photos/300/200" alt="Foto de perfil" style="border-radius: 8px; width: 100%; max-height: 220px; object-fit: cover;">
+
+    <h2>Sobre Mim</h2>
+    <p>
+      Tenho foco em desenvolvimento de software, estruturas de dados e bancos de dados. 
+      Este site faz parte da minha prática contínua construindo interfaces com HTML, CSS e JavaScript do zero.
+    </p>
+
+    <!-- Habilidades / Tecnologias -->
+    <h2>Tecnologias & Ferramentas</h2>
+    <ul>
+      <li>Python & Estruturas de Dados</li>
+      <li>Bancos de Dados Relacionais (PostgreSQL / MySQL)</li>
+      <li>HTML5, CSS3 & JavaScript Básico</li>
+      <li>Metodologias Ágeis & Engenharia de Software</li>
+    </ul>
+
+    <!-- Formulário de Contacto -->
+    <h2>Entre em Contacto</h2>
+    <div class="botoes-contacto">
+      <!-- WhatsApp (substitua o número pelo seu DDD + número, sem espaços ou traços) -->
+      <a href="https://wa.me/5554991028319" target="_blank" class="btn-link btn-whatsapp">WhatsApp</a>
+      
+      <!-- E-mail (substitua pelo seu endereço de e-mail) -->
+      <a href="mailto:henrique769oliveira@gmail.com" class="btn-link btn-email">E-mail</a>
+    </div>
+    <p>Deixe uma mensagem ou proposta:</p>
+  <input type="text" id="nomeUsuario" placeholder="Escreva o seu nome aqui...">
+  <button onclick="alert('Olá, ' + document.getElementById('nomeUsuario').value + '! Bem-vindo!')">Enviar</button>
+  <h2>Preferências e Feedback:</h2>
+
+  <!-- 1. Caixa de seleção (Checkbox) -->
+  <p>
+    <label>
+      <input type="checkbox" id="notificacoes"> Desejo receber notificações por e-mail
+    </label>
+  </p>
+
+  <!-- 2. Menu suspenso (Select) -->
+  <p>
+    <label for="turno">Qual o seu turno preferido?</label><br>
+    <select id="turno">
+      <option value="manha">Manhã</option>
+      <option value="tarde">Tarde</option>
+      <option value="noite">Noite</option>
+    </select>
+  </p>
+
+  <!-- 3. Campo de texto longo (Textarea) -->
+  <p>
+    <label for="comentarios">Deixe um comentário longo:</label><br>
+    <textarea id="comentarios" rows="4" cols="40" placeholder="Escreva aqui a sua mensagem detalhada..."></textarea>
+  </p>
+  <button type="button" onclick="mostrarResumo()">Ver Resumo</button>
+  <div id="resultado" style="margin-top: 15px; font-weight: bold; color: #1d3557;"></div>
+  <div style="background-color: lightgray; padding: 15px; border-radius: 8px;">
+    <h3>Secção em Destaque</h3>
+    <p>Esta caixa cinzenta agrupa elementos com um fundo colorido.</p>
+  </div>
+  <h2>As Minhas Coisas Favoritas</h2>
+    <ul>
+      <li>Café</li>
+      <li>Programação</li>
+      <li>Filmes e séries</li>
+    </ul>
+
+    <p>Visite um site externo: <a href="https://www.google.com" target="_blank">Abrir o Google</a></p>
+ <script>
+    function mostrarResumo() {
+      // 1. Ler os valores dos campos
+      const turnoSelecionado = document.getElementById('turno').value;
+      const querNotificacoes = document.getElementById('notificacoes').checked;
+
+      // 2. Montar o texto com base nas respostas
+      let mensagem = 'Turno escolhido: ' + turnoSelecionado.toUpperCase() + '. ';
+      
+      if (querNotificacoes) {
+        mensagem += 'Notificações ativadas!';
+      } else {
+        mensagem += 'Sem notificações por e-mail.';
+      }
+
+      // 3. Escrever o texto dentro do div de resultado
+      document.getElementById('resultado').innerText = mensagem;
+    }
+  </script>
+  </div>
+</body>
+</html>
