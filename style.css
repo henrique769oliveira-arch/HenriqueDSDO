@@ -81,3 +81,14 @@ textarea {
 .btn-email {
   background-color: #2563eb; /* Azul da sua paleta */
 }
+/* Imagem de destaque / Banner */
+.banner-img {
+  width: 100%;       /* Ocupa toda a largura do cartão */
+  max-width: 100%;   /* Garante que nunca transborda o limite */
+  height: 200px;     /* Reduz a altura para ficar como um banner discreto */
+  object-fit: cover; /* Recorta a imagem para o espaço sem a distorcer (foca no meio) */
+  border-radius: 8px;/* Arredonda os cantos */
+  display: block;    /* Remove espaços vazios indesejados abaixo dela */
+  margin-top: 15px;  /* Espaço em relação ao texto de cima */
+  margin-bottom: 25px; /* Espaço em relação ao título "Sobre Mim" de baixo */
+}
